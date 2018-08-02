@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="load.css" media="all">
+	<script src="load.js" charset="utf-8"></script>
+	<style>
+		button {
+			outline: none;
+			padding: 5px 15px;
+			border: 1px solid #eee;
+			background-color: #FFFFFF;
+			border-radius: 5px;
+			font-size: 12px;
+		}
+
+		button:hover {
+			cursor: pointer;
+			background: #95d2de
+		}
+	</style>
+</head>
+
+<body id="test_mask" style='width: 100%;'>
+	<button onclick="mask_element_continuious()">数据加载</button>
+	<button onclick="mask_close()">关闭加载</button>
+</body>
+<script type="text/javascript">
+	$('#test_mask').css('height', $(window).height())
+
+	//加载层-指定元素:不自动关闭
+	function mask_element_continuious() {
+		$.mask_element('#test_mask');
+	}
+	//关闭指定元素加载层
+	function mask_close() {
+		$.mask_close('#test_mask');
+	}
+</script>
+
+</html>
